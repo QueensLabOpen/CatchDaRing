@@ -127,10 +127,11 @@ function animate() {
         objects.forEach(object => {
             object.update();
         });
+    } else {
+        scareTheShitOutOfPeople()
     }
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
     init()
-    animate()
 });

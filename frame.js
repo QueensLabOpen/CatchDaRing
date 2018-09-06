@@ -12,12 +12,19 @@ function setStats(l, s) {
     score.textContent = s.toString().lpad('0', 4);
 }
 
+function scareTheShitOutOfPeople() {
+
+}
+
 window.onload = () => {
     const canvas = document.getElementById('canvas');
     const splash = document.getElementById('splash');
     const dismissSplash = document.getElementById('dismiss-splash');
 
     dismissSplash.onclick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         splash.classList.add('hidden');
+        animate()
     }
 }
