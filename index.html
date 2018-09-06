@@ -59,6 +59,17 @@
           flex-flow: column nowrap;
           align-items: center;
         }
+        .scary {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 2;
+        }
+        .scary.show {
+          display: block;
+        }
         canvas {
             background-color: black;
             width: 100%;
@@ -71,7 +82,7 @@
 <body>
   <div id="splash" class="splash">
     <img src="img/catchtheringlogo.png">
-    <button id="dismiss-splash">Tap to Play!</button>
+    <button id="dismiss-splash"><img src="img/taptoplay.png"></button>
   </div>
   <div id="games">
     <div class="stats">
@@ -85,6 +96,7 @@
       </div>
     </div>
     <canvas id="canvas"></canvas>
+    <img src="img/scary.jpeg" class="scary" id="scary">
   </div>
 </body>
 </html>

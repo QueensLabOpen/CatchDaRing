@@ -28,5 +28,8 @@ window.onload = () => {
 
         init()
         animate()
+        window.setTimeout(function () {
+            document.getElementById('scary').classList.add('show')
+        }, 10000);
     }
 }
