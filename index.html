@@ -26,13 +26,19 @@
           width: 100%;
 
           display: flex;
-          flex-flow: row nowrap;
+          flex-flow: column nowrap;
           justify-content: center;
+          align-items: center;
 
           background-color: black;
         }
+        .splash > img {
+          display: block;
+          margin-top: auto;
+          margin-bottom: auto;
+        }
         .splash > button {
-          align-self: flex-end;
+          margin-top: auto;
           margin-bottom: 24px;
 
           background: none;
@@ -63,6 +69,7 @@
 </head>
 <body>
   <div id="splash" class="splash">
+    <img src="img/catchtheringlogo.png">
     <button id="dismiss-splash">Tap to Play!</button>
   </div>
   <div id="games">
