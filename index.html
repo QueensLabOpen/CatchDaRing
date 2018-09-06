@@ -14,7 +14,7 @@
         }
         .hidden {
           opacity: 0;
-          transition: opacity 3s ease-in-out;
+          transition: opacity 1s ease-in-out;
         }
         .splash {
           position: absolute;
@@ -62,38 +62,11 @@
           }
       }
     </style>
-    <!--<script defer src="canvas.js"></script>-->
-    <script>
-      String.prototype.lpad = function(padString, length) {
-          var str = this;
-          while (str.length < length)
-              str = padString + str;
-          return str;
-      }
-      window.onload = () => {
-        const canvas = document.getElementById('canvas');
-        const score = document.getElementById('score');
-        const lives = document.getElementById('lives');
-        const splash = document.getElementById('splash');
-        const dismissSplash = document.getElementById('dismiss-splash');
-
-        function runGame(cvs, f) {
-          f(3, 100);
-        }
-
-        dismissSplash.onclick = (e) => {
-          splash.classList.add('hidden');
-        }
-
-        runGame(canvas, (l, s) => {
-          lives.textContent = l.toString();
-          score.textContent = s.toString().lpad('0', 4);
-        });
-      }
-    </script>
+    <script defer src="canvas.js"></script>
+    <script defer src="frame.js"></script>
 </head>
 <body>
-  <div id="splash" class="splash">
+  <div id="splash" class="splash hidden">
     <button id="dismiss-splash">Play!</button>
   </div>
   <div id="games">
