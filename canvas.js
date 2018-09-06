@@ -131,7 +131,3 @@ function animate() {
         scareTheShitOutOfPeople()
     }
 }
-
-document.addEventListener("DOMContentLoaded", function(event) {
-    init()
-});
