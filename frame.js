@@ -25,6 +25,8 @@ window.onload = () => {
         e.preventDefault();
         e.stopPropagation();
         splash.classList.add('hidden');
+
+        init()
         animate()
     }
 }
